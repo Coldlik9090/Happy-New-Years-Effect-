@@ -1,0 +1,80 @@
+@import url('https://fonts.gooogleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins' sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+h2{
+    position: absolute;
+    font-size: 4em;
+    color: #404040;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    cursor: default;
+    text-align: center;
+}
+
+h2::before
+{
+    content: '';
+    position: absolute;
+    top: 40px;
+    height: 4px;
+    width: calc(100% - 145px);
+    background: #f00;
+    transition: transform 0.5s;
+    transform-origin: left;
+    text-shadow: 0 0 5px #f00,
+    0 0 15 px #f00,
+    0 0 30 px #f00,
+    0 0 60 px #f00;
+}
+
+h2:hover::before
+{
+transform-origin: left;
+transform: scaleX(0);
+}
+
+h2 span {
+    position: absolute;
+    transition: 0.25s;
+    color: #f00;
+    text-shadow: 0 0 5px #f00,
+    0 0 15 px #f00,
+    0 0 30 px #f00,
+    0 0 60 px #f00;
+}
+
+h2 span:nth-child(2) 
+{
+    transform: translateY(-70px);
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0,
+    0 0 15 px #0f0,
+    0 0 30 px #0f0,
+    0 0 60 px #0f0;
+    opacity: 0;
+}
+
+h2:hover span:nth-child(1)
+{
+    transform: translateY(70px);
+    opacity: 0;
+}
+
+h2:hover span:nth-child(2)
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
